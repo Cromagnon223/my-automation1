@@ -1,0 +1,12 @@
+name: Daily pipeline
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 16 * * *"
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "It works!"
